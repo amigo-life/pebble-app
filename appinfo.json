@@ -1,0 +1,19 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "ricardo.delfin.garcia@gmail.co",
+    "longName": "amigo-life-pebble",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "amigo-life-pebble",
+    "uuid": "37df5e2a-4a5e-47c4-b400-535cc772093d",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
