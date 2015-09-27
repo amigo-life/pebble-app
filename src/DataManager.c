@@ -1,4 +1,5 @@
 #include <pebble.h>
+#include <string.h>
 #include "DataManager.h"
 #define DATA_KEY 7
 
@@ -54,6 +55,28 @@ void setPlayExpire(time_t playExpire)
   time_t getplayExpire()
   {
     return am.playExpire;
+  }
+
+
+void dataInit()
+  {
+    if(persist_exists(DATA_KEY))
+    {
+       persist_read_data(DATA_KEY, &am, sizeof(struct Amigo));
+    }
+    else
+      {
+      char* john = "John";
+      strcpy(am.name, john);
+      setHeart(MAX_HEARTS);
+      setThirstExpire(THRIST_EXPIRE + time(NULL));
+      setFunExpire(FUN_EXPIRE + time(NULL));
+      setHungryExpire(HUNGRY_EXPIRE + time(NULL));
+      setPlayExpire(PLAY_EXPIRE + time(NULL));
+      
+      
+      }
+      
   }
 /*
 subtractHeart will take in the amount of hearts lost and subtract by how much the current hearts the amigo has

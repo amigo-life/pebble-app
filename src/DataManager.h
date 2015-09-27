@@ -6,6 +6,7 @@
 #define FUN_EXPIRE 120
 #define PLAY_EXPIRE 180
 #define HUNGRY_EXPIRE 240
+#define MAX_HEARTS 5
 
 
   /*
@@ -39,7 +40,7 @@ time_t gethungryExpire();
 void setPlayExpire(time_t playExpire);
 time_t getplayExpire();
 
-
+void dataInit();
 /*
 timesExpired will return the an int for the amount of times the amigo expired
 if it didn't expire then it wuill return 0
