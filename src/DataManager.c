@@ -1,11 +1,11 @@
 #include <pebble.h>
 #include "DataManager.h"
+#define DATA_KEY 7
 
   void setHeart(int heart)
   {
     am.heart= heart;
-  +
-    +
+    persist_write_data( DATA_KEY, &am , sizeof(struct Amigo));
   }
   int getheart()
   {
@@ -15,6 +15,7 @@
 void setThirstExpire(time_t thirstExpire)
   {
     am.thirstExpire = thirstExpire;
+    persist_write_data( DATA_KEY, &am , sizeof(struct Amigo));
   
   }
   time_t getthirstExpire()
@@ -25,6 +26,7 @@ void setThirstExpire(time_t thirstExpire)
 void setFunExpire(time_t funExpire)
   {
     am.funExpire = funExpire;
+    persist_write_data( DATA_KEY, &am , sizeof(struct Amigo));
   
   }
   time_t getfunExpire()
@@ -35,6 +37,7 @@ void setFunExpire(time_t funExpire)
 void setHungryExpire(time_t hungryExpire)
   {
     am.hungryExpire = hungryExpire;
+    persist_write_data( DATA_KEY, &am , sizeof(struct Amigo));
   
   }
   time_t gethungryExpire()
@@ -45,6 +48,7 @@ void setHungryExpire(time_t hungryExpire)
 void setPlayExpire(time_t playExpire)
   {
     am.playExpire = playExpire;
+    persist_write_data( DATA_KEY, &am , sizeof(struct Amigo));
   
   }
   time_t getplayExpire()

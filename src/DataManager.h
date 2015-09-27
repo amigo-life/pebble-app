@@ -27,16 +27,16 @@ struct Amigo am;
 void setHeart(int heart);
 int getHeart();
 
-time_t setThirstExpire(time_t thirstExpire);
+void setThirstExpire(time_t thirstExpire);
 time_t getthirstExpire();
 
-time_t setFunExpire(time_t funExpire);
+void setFunExpire(time_t funExpire);
 time_t getfunExpire();
 
-time_t setHungryExpire(time_t hungryExpire);
+void setHungryExpire(time_t hungryExpire);
 time_t gethungryExpire();
 
-time_t setPlayExpire(time_t playExpire);
+void setPlayExpire(time_t playExpire);
 time_t getplayExpire();
 
 
